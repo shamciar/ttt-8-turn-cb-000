@@ -28,12 +28,18 @@ def valid_move?(board, index)
 end
 
 def move(array, index, value = "X")
-  if valid_move?(array, index)
     array[index] = value
-  end
 end
 
 def turn(board)
   puts "Please enter 1-9: "
+  input = gets.strip
+  input = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, input, value)
+  else
+    "Invalid input. Try again."
+    turn(board)
+  end
 end
 
