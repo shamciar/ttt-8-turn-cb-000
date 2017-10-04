@@ -34,7 +34,7 @@ def move(array, index, value = "X")
 end
 
 def turn(board)
-  puts "Please enter 1-9: "
+  puts "Please enter 1-9:"
   input = gets.strip
   input = input_to_index(input)
   if valid_move?(board, index)
